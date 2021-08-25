@@ -4,7 +4,7 @@ import {
   HydrateLoad,
 } from 'https://cdn.spooky.click/ocean/1.2.1/mod.js';
 
-import '../../views/components/el.js';
+import './vendor/views/components/el.js';
 
 const { document } = globalThis;
 
