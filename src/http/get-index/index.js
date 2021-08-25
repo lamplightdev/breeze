@@ -4,7 +4,7 @@ import {
   HydrateLoad,
 } from 'https://cdn.spooky.click/ocean/1.2.1/mod.js';
 
-import '../../../public/components/el.js';
+import '../../views/components/el.js';
 
 const { document } = globalThis;
 
@@ -14,7 +14,7 @@ const { html, elements } = new Ocean({
   hydrators: [new HydrateLoad()],
 });
 
-elements.set('wafer-el', '/_static/components/el.js');
+elements.set('wafer-el', '/_static/components/el.dist.js');
 
 let iterator = html`
   <!DOCTYPE html>
