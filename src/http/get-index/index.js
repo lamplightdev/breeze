@@ -9,6 +9,8 @@ import '../../../public/components/el2.js';
 
 const { document } = globalThis;
 
+console.log({ document });
+
 const { html, elements } = new Ocean({
   document,
   polyfillURL: '/_static/dsd.js',
