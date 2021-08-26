@@ -15,8 +15,8 @@ const { html, elements } = new Ocean({
   hydrators: [new HydrateLoad()],
 });
 
-elements.set('wafer-el', '/_static/components/el.dist.js');
-elements.set('wafer-el-2', '/_static/components/el2.dist.js');
+elements.set('wafer-el', '/_static/components/el.js');
+elements.set('wafer-el-2', '/_static/components/el2.js');
 
 let iterator = html`
   <!DOCTYPE html>
