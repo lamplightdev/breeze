@@ -44346,6 +44346,42 @@ class MyElement extends WaferClient {
     }
 }
 customElements.define('wafer-el', MyElement);
+class MyElement1 extends WaferClient {
+    static get template() {
+        return `
+    Hi!
+      <span id="count"></span>
+      <button id="dec">-</button>
+      <button id="inc">+</button>
+    `;
+    }
+    static get props() {
+        return {
+            count: {
+                type: Number,
+                reflect: true,
+                initial: 10,
+                targets: [
+                    {
+                        selector: '$#count',
+                        text: true
+                    }, 
+                ]
+            }
+        };
+    }
+    get events() {
+        return {
+            '$#dec': {
+                click: ()=>this.count--
+            },
+            '$#inc': {
+                click: ()=>this.count++
+            }
+        };
+    }
+}
+customElements.define('wafer-el-2', MyElement1);
 const { document: document3  } = globalThis;
 const { html , elements: elements1  } = new Ocean({
     document: document3,
@@ -44355,12 +44391,14 @@ const { html , elements: elements1  } = new Ocean({
     ]
 });
 elements1.set('wafer-el', '/_static/components/el.dist.js');
+elements1.set('wafer-el-2', '/_static/components/el2.dist.js');
 let iterator = html`
   <!DOCTYPE html>
   <html lang="en">
     <title>My app</title>
 
     <wafer-el count="5" ocean-hydrate="load"></wafer-el>
+    <wafer-el-2 count="50" ocean-hydrate="load"></wafer-el-2>
   </html>
 `;
 let code = '';

@@ -5,6 +5,7 @@ import {
 } from 'https://cdn.spooky.click/ocean/1.2.1/mod.js';
 
 import './vendor/views/components/el.js';
+import './vendor/views/components/el2.js';
 
 const { document } = globalThis;
 
@@ -15,6 +16,7 @@ const { html, elements } = new Ocean({
 });
 
 elements.set('wafer-el', '/_static/components/el.dist.js');
+elements.set('wafer-el-2', '/_static/components/el2.dist.js');
 
 let iterator = html`
   <!DOCTYPE html>
@@ -22,6 +24,7 @@ let iterator = html`
     <title>My app</title>
 
     <wafer-el count="5" ocean-hydrate="load"></wafer-el>
+    <wafer-el-2 count="50" ocean-hydrate="load"></wafer-el-2>
   </html>
 `;
 
