@@ -4,7 +4,8 @@
   "description": "Begin basic Hello World! app for Deno",
   "scripts": {
     "start": "run-s cross-env",
-    "cross-env": "cross-env NODE_ENV=testing sandbox"
+    "cross-env": "cross-env NODE_ENV=testing sandbox",
+    "build": "deno bundle src/http/get-index/index.js src/http/get-index/index.js"
   },
   "devDependencies": {
     "@architect/sandbox": "latest",
