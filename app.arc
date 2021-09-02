@@ -3,4 +3,4 @@ breeze
 
 @http
 get /
-
+get /test

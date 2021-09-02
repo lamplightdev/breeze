@@ -5,7 +5,7 @@
   "scripts": {
     "start": "run-s cross-env",
     "cross-env": "cross-env NODE_ENV=testing sandbox",
-    "localbuild": "deno bundle src/http/get-index/index.src.js src/http/get-index/index.js"
+    "localbuild": "deno bundle --unstable --no-check src/http/get-test/index.src.js src/http/get-test/index.js"
   },
   "devDependencies": {
     "@architect/sandbox": "latest",

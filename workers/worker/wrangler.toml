@@ -1,0 +1,19 @@
+name = "worker"
+type = "javascript"
+
+account_id = "66b7f9225492188063fe1e37755a4550"
+workers_dev = true
+route = ""
+zone_id = ""
+
+[build]
+command = "npm install && npm run build"
+
+[build.upload]
+format = "modules"
+dir = "./dist"
+main = "./index.js"
+
+[[build.upload.rules]]
+type = "ESModule"
+globs = ["**/*.js"]
