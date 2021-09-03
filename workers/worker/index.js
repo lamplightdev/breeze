@@ -1,4 +1,4 @@
-import './shim.js'
+import '../../../ocean/lib/shim-node.js'
 import {
   HydrateLoad,
   Ocean,
